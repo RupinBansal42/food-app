@@ -1,0 +1,21 @@
+{
+  "name": "react-food-app",
+  "version": "1.0.0",
+  "description": "food-app by Rupin Bansal",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RupinBansal42/food-app.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Rupin Bansal",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
