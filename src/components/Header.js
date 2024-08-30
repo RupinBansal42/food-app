@@ -1,4 +1,4 @@
-import {headerURL} from "../config/constants"
+import {headerURL} from "../../config/constants"
 
 const Header = () => {
   return (

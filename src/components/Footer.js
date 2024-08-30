@@ -1,4 +1,4 @@
-import { facebookURL, instaLogoURL, twitterLogoURL } from "../config/constants";
+import { facebookURL, instaLogoURL } from "../../config/constants";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
 import ResturantCard from "./ResturantCard";
-import resList from "./../config/swiggyData";
+import resList from "../../config/swiggyData";
 
 const Body = () => {
   return (

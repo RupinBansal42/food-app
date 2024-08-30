@@ -1,4 +1,4 @@
-import { cloudinaryImageIdLink } from "../config/constants";
+import { cloudinaryImageIdLink } from "../../config/constants";
 
 const ResturantCard = (props) => {
   console.log("props",props)
