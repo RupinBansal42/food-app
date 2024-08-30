@@ -9,5 +9,25 @@
 - Bundle the codebase
 - Compress of the files 
 - Faster Build [.parcel-cache is been created] Cache availabilty.
+- Diagnostic in background
+- Error handling
+- Code Splitting 
+- Consistent Hashing 
+- Tree Shaking - remove unused code 
+- HTTPs
 
 
+
+# FOOD_APP
+- Header
+    - Logo 
+    - Nav Items
+- Body
+    - Search 
+    - Restaurant Container
+        - Resturant Card
+- Footer
+    - Copyright
+    - Links
+    - Address
+    - Contact

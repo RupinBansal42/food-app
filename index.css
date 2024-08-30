@@ -1,0 +1,106 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    background-color: rgb(40, 108, 90);
+    color: white;
+
+
+
+}
+
+.logo {
+    width: 150px;
+
+}
+
+.nav-items>ul {
+    display: flex;
+    padding: 0px 20px;
+    font-size: 20px;
+}
+.nav-items>ul>li:hover {
+    border: 1px solid black;
+    cursor: pointer;
+    border-style: dotted;
+}
+
+
+
+.nav-items>ul>li {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+
+}
+
+
+.resturant-card {
+    height: 510px;
+    width: 250px;
+    margin: 10px;
+    
+}
+
+.resturant-card:hover {
+    border: 1px solid black;
+    cursor: pointer;
+    border-style: dotted;
+
+
+}
+
+.search {
+    padding : 10px;
+    text-align: center;
+}
+
+.card-image {
+    width:100%;
+}
+
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(40, 108, 90);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content:space-between;
+
+  
+}
+
+.facebook-logo {
+    width: 100px;
+}
+
+.facebook-logo:hover {
+    border: 1px solid green;
+    cursor: pointer;
+    border-style: dotted;
+}
+.insta-logo {
+    width: 100px;
+}
+
+.insta-logo:hover {
+    border: 1px solid green;
+    cursor: pointer;
+    border-style: dotted;
+}
