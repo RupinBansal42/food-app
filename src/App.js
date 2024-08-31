@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import AppLayout from "./components/AppLayout";
-import './index.css';
+import './../index.css';
 
 
 const App = () => {

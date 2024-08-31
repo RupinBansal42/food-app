@@ -16,6 +16,12 @@
 - Tree Shaking - remove unused code 
 - HTTPs
 
+# 30 August
+- React Hooks [Normal JS function - utility provided by React]
+    - useState
+    - useEffect
+    - 
+
 
 
 # FOOD_APP

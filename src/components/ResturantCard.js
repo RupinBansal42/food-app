@@ -1,16 +1,15 @@
 import { cloudinaryImageIdLink } from "../../config/constants";
 
 const ResturantCard = (props) => {
-  console.log("props",props)
-  const {resData} = props
-  const {name, id, avgRating, cuisines, costForTwo, sla, cloudinaryImageId} = resData?.info
+  const { name, id, avgRating, cuisines, costForTwo, sla, cloudinaryImageId } =
+    props?.resInfo?.info;
   // Destructuring
   return (
     <div className="resturant-card">
       <img
         className="card-image"
         alt="res-logo"
-        src = {cloudinaryImageIdLink + cloudinaryImageId}
+        src={cloudinaryImageIdLink + cloudinaryImageId}
       ></img>
       <h2>{name}</h2>
       <h4>{cuisines.join(",")}</h4>

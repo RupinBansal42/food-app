@@ -182,7 +182,7 @@ export default resList = [
       areaName: "Rohtak",
       costForTwo: "₹400 for two",
       cuisines: ["Pizzas", "Italian", "Pastas", "Desserts"],
-      avgRating: 4.1,
+      avgRating: 4.3,
       parentId: "2456",
       avgRatingString: "4.1",
       totalRatingsString: "1K+",

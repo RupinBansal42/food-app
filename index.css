@@ -104,3 +104,11 @@
     cursor: pointer;
     border-style: dotted;
 }
+
+
+.filter-btn {
+    margin: 10px;
+    cursor: pointer;
+    background: rgb(2, 94, 26);
+    color: antiquewhite;
+}

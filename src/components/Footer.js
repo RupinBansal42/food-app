@@ -14,7 +14,6 @@ const Footer = () => {
       <div className="logo-footer">
         <img className="facebook-logo" src={facebookURL}></img>
         <img className="insta-logo" src={instaLogoURL}></img>
-
       </div>
     </div>
   );

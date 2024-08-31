@@ -1,20 +1,42 @@
 import ResturantCard from "./ResturantCard";
 import resList from "../../config/swiggyData";
-
+import { useState } from "react";
 const Body = () => {
+  const [resturantList, setResturantList] = useState(resList); // Gives you state varaible
   return (
     <div className="body">
-      <div className="search">Search</div>
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+            {
+              filterList = resList.filter(
+                (resturant) => resturant.info.avgRating === 4.3
+              );
+            }
+            setResturantList(filterList);
+          }}
+        >
+          Top Rated Resturants
+        </button>
+        <button
+          className="filter-btn"
+          onClick={() => {
+            {
+              filterList = resList.filter(
+                (resturant) => resturant.info.sla.deliveryTime < 15
+              );
+            }
+            setResturantList(filterList);
+          }}
+        >
+          Rapid Delivery
+        </button>
+      </div>
       <div className="res-container">
-        {resList.map((resturant) => {<ResturantCard resData={resturant} />})}
-        <ResturantCard resData={resList[0]} />
-        <ResturantCard resData={resList[1]} />
-        <ResturantCard resData={resList[2]} />
-        <ResturantCard resData={resList[3]} />
-        <ResturantCard resData={resList[4]} />
-        <ResturantCard resData={resList[5]} />
-        <ResturantCard resData={resList[6]} />
-        <ResturantCard resData={resList[7]} />
+        {resturantList.map((resturant) => (
+          <ResturantCard resInfo={resturant} />
+        ))}
       </div>
     </div>
   );
