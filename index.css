@@ -4,6 +4,8 @@
     border: 1px solid grey;
     background-color: rgb(40, 108, 90);
     color: white;
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
+    
 
 
 
@@ -19,6 +21,7 @@
     padding: 0px 20px;
     font-size: 20px;
 }
+
 .nav-items>ul>li:hover {
     border: 1px solid black;
     cursor: pointer;
@@ -36,10 +39,10 @@
 
 
 .resturant-card {
-    height: 510px;
-    width: 250px;
+    height: 600px;
+    width: 320px;
     margin: 10px;
-    
+
 }
 
 .resturant-card:hover {
@@ -51,12 +54,12 @@
 }
 
 .search {
-    padding : 10px;
+    padding: 10px;
     text-align: center;
 }
 
 .card-image {
-    width:100%;
+    width: 100%;
 }
 
 
@@ -72,18 +75,18 @@
 
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(40, 108, 90);
-  color: white;
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  justify-content:space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(40, 108, 90);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 
-  
+
 }
 
 .facebook-logo {
@@ -95,6 +98,7 @@
     cursor: pointer;
     border-style: dotted;
 }
+
 .insta-logo {
     width: 100px;
 }
@@ -111,4 +115,24 @@
     cursor: pointer;
     background: rgb(2, 94, 26);
     color: antiquewhite;
+}
+
+
+
+.shimmer-card {
+    height: 400px;
+    width: 200px;
+    background-color: #f0f0f0;
+    margin: 10px
+}
+
+.shimmer-container {
+    display: flex;
+    margin: 10px,
+
+
+}
+
+.filter { 
+    display: flex;
 }
