@@ -23,7 +23,11 @@
 - React Hooks [Normal JS function - utility provided by React]
     - useState
     - useEffect
-    - 
+    - useRouteError
+
+# 2 types Routing in web apps
+- Client Side Routing [-First and only call to API in starting phase and then render UI and then only Loads the components ]
+- Server Side Routing [Complete Page Reloading - N/W call, data is coming from server]
 
 
 
@@ -40,3 +44,9 @@
     - Links
     - Address
     - Contact
+
+
+
+- Different Page for different Food Card
+    - Dynamic Routing for every Resturant Card.
+
