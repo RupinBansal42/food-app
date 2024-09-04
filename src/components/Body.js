@@ -30,16 +30,17 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black py-2 px-10"
             placeholder="Enter Resturant Name"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
+            className="h-10 px-6 m-4 font-semibold rounded-md bg-gray-600 text-white"
             onClick={() => {
               searchResturant = resturantList.filter((resturant) =>
                 resturant.info.name.toLowerCase().includes(searchText)
@@ -50,34 +51,38 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            {
-              filterList = filteredresturantList.filter(
-                (resturant) => resturant.info.avgRating > 4.3
-              );
-            }
-            setResturantList(filterList);
-          }}
-        >
-          Top Rated Resturants
-        </button>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            {
-              filterList = filteredresturantList.filter(
-                (resturant) => resturant.info.sla.deliveryTime < 15
-              );
-            }
-            setResturantList(filterList);
-          }}
-        >
-          Rapid Delivery
-        </button>
+        <div className="m-4 p-4 flex items-center">
+          <button
+            className="h-10 px-6 font-semibold rounded-md bg-gray-600 text-white"
+            onClick={() => {
+              {
+                filterList = filteredresturantList.filter(
+                  (resturant) => resturant.info.avgRating > 4.3
+                );
+              }
+              setResturantList(filterList);
+            }}
+          >
+            Top Rated Resturants
+          </button>
+        </div>
+        <div className="p-4 m-4 flex items-center">
+          <button
+            className="h-10 px-6 font-semibold rounded-md bg-gray-600 text-white"
+            onClick={() => {
+              {
+                filterList = filteredresturantList.filter(
+                  (resturant) => resturant.info.sla.deliveryTime < 15
+                );
+              }
+              setResturantList(filterList);
+            }}
+          >
+            Rapid Delivery
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredresturantList.map((resturant) => (
           <Link key={resturant.info.id} to={"/resturant/" + resturant.info.id}>
             <ResturantCard resInfo={resturant} />

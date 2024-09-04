@@ -1,4 +1,5 @@
 # parcel
+
 - local server 
 - dev build
 - refereshing your page [HMR - hot module replacement]
@@ -6,7 +7,7 @@
 -  Keeping track on each file [File Watching Algoritm - written in c++]
 - Image Processing
 - Minification of Code 
-- Bundle the codebase
+- Bundle the codebase [IMPORTANT] - takes all file and generate one JS [eg- dist folder -> one index.js file]
 - Compress of the files 
 - Faster Build [.parcel-cache is been created] Cache availabilty.
 - Diagnostic in background

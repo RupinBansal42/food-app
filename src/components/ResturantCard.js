@@ -5,14 +5,14 @@ const ResturantCard = (props) => {
     props?.resInfo?.info;
   // Destructuring
   return (
-    <div className="resturant-card">
+    <div className=" m-4 p-4 w-[250px] bg-gray-100 backdrop-blur-2xl hover:bg-gray-200	">
       <img
-        className="card-image"
+        className="w-40 rounded-lg "
         alt="res-logo"
         src={cloudinaryImageIdLink + cloudinaryImageId}
       ></img>
-      <h2>{name}</h2>
-      <h4>{cuisines.join(",")}</h4>
+      <h2 className="font-bold py-4 text-lg">{name}</h2>
+      <h4 className="font-bold">{cuisines.join(", ")}</h4>
       <h4>{costForTwo}</h4>
       <h4>{avgRating} Stars</h4>
       <h4>{sla.slaString}</h4>
