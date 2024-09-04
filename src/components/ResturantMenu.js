@@ -2,6 +2,7 @@ import Shimmer from "./Shimmer";
 import { cloudinaryImageIdLink } from "../../config/constants";
 import { useParams } from "react-router-dom";
 import useResturantMenu from "../../utils/useResturantMenu";
+import ResturantCategory from "./ResturantCategory";
 
 const ResturantMenu = () => {
   const { resId } = useParams();
@@ -15,27 +16,25 @@ const ResturantMenu = () => {
     resturantInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
       ?.card;
 
+  const categories =
+    resturantInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+  console.log("categories", categories);
   return (
-    <div className="menu">
-      <div className="menu-item">
-        <img
-          className="resturant-menu"
-          alt="res-logo"
-          src={cloudinaryImageIdLink + cloudinaryImageId}
-        ></img>
-        <h1>{name}</h1>
-        <h3>{cuisines}</h3>
-        <h3>{avgRating}</h3>
-        <h3>{costForTwoMessage}</h3>
-        <h3>Resturant Menu Details</h3>
-        <ul>
-          {itemCards.map((item) => (
-            <li key={item.card.info.id}>
-              {item.card.info.name} - {costForTwoMessage}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="text-center my-10">
+      <h1 className="font-bold my-6 text-2xl">{name}</h1>
+      <p className="font-bold text-lg">
+        {cuisines.join(", ")} - {costForTwoMessage}
+      </p>
+      {/**
+       * Accordian - Header / Body[Collapsable]
+       */}
+      {categories.map((category) => (
+        <ResturantCategory data = {category?.card?.card} />
+      ))}
     </div>
   );
 };
