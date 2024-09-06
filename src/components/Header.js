@@ -1,8 +1,8 @@
-import { useState , lazy} from "react";
+import { useState, lazy, useContext } from "react";
 import { headerURL } from "../../config/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
-
+import UserContext from "../../utils/UserContext";
 
 const Header = () => {
   let [buttonName, setButtonValue] = useState("Login");
@@ -16,7 +16,9 @@ const Header = () => {
       <div className="nav-items">
         <ul className="flex p-8 m-8 space-x-10 ">
           <li> Online Status : {onlineStatus ? "Green" : "Red"}</li>
-          <li><Link to="/grocery">Grocery</Link></li>
+          <li>
+            <Link to="/grocery">Grocery</Link>
+          </li>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -28,6 +30,7 @@ const Header = () => {
           <li>
             <Link to="/contact">Contact Us</Link>
           </li>
+
           <button
             className="Login-button"
             onClick={() =>
@@ -38,6 +41,9 @@ const Header = () => {
           >
             {buttonName}
           </button>
+          <li>
+            <span>"loggedInUser"</span>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,8 +1,9 @@
 import ResturantCard, { withPromotedLabel } from "./ResturantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { APIURL } from "../../config/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import UserContext from "../../utils/UserContext";
 
 const Body = () => {
   const [resturantList, setResturantList] = useState([]);
@@ -32,7 +33,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter flex">
+      <div className="filter flex border to-black rounded-lg">
         <div className="search m-4 p-4">
           <input
             type="text"
@@ -83,11 +84,25 @@ const Body = () => {
             Rapid Delivery
           </button>
         </div>
+        <div className="search m-4 p-4 flex items-baseline">
+          <label>UserName:</label>
+          <input
+            type="text"
+            className="border border-solid border-black py-2 px-10"
+            placeholder="Enter User Name"
+            value="Rupin Bansal"
+            onChange={() => setUserName(e.target.value)}
+          />
+        </div>
       </div>
       <div className="flex flex-wrap">
         {filteredresturantList.map((resturant) => (
           <Link key={resturant.info.id} to={"/resturant/" + resturant.info.id}>
-            {resturant ? <ResturantCardPromoted resInfo = {resturant}/> : <ResturantCard resInfo={resturant} />}
+            {resturant ? (
+              <ResturantCardPromoted resInfo={resturant} />
+            ) : (
+              <ResturantCard resInfo={resturant} />
+            )}
           </Link>
         ))}
       </div>
